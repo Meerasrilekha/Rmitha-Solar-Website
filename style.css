@@ -41,9 +41,6 @@ header {
   z-index: 1000;
   padding: 18px 20px;
 }
-
-
-
 /* Center-aligned content in services section */
 .services .heading {
     text-align: center;
@@ -127,7 +124,6 @@ header {
     gap: 100px;
     margin-top: 80px;
 }
-
 .home-text h3 {
     font-size: 30px;
     margin-bottom: 10px;
@@ -138,10 +134,8 @@ header {
     margin-bottom: 20px;
     text-align: justify;
     text-justify: inter-word; /* Adjusts word spacing */
-    hyphens: auto; /* Enables hyphenation */
-    
+    hyphens: auto; /* Enables hyphenation */ 
 }
-
 .home-text .btn {
     padding: 10px 25px;
     background: var(--main-color);
@@ -158,8 +152,6 @@ header {
     width: 500px;
     border-radius: 6px;
 }
-
-
 .green-divider {
     height: 10px;
     background-color: var(--main-color);
@@ -250,8 +242,8 @@ header {
 
 .customers-container {
   display: flex;
-  flex-wrap: wrap; /* Ensure boxes wrap on smaller screens */
-  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; 
+  justify-content: center;
 }
 
 .customers .box {
