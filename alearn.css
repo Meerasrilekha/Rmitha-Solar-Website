@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -89,40 +90,78 @@ header {
     margin: 20px 0;
 }
 
-.vision-mission .vision{
-    background: var(--bg-color);
-    padding: 120px; /* Reduced padding */
-    text-align: center;
+.vision-mission {
+    display: flex;
+    gap: 20px;
     justify-content: center;
-}
-.vision-mission .mission{
-    background-color: var(--bg-color);
-    margin-top: -60px; /* Reduced padding */
-    text-align: center;
-    justify-content: center;
+    padding: 60px 20px;
 }
 
-.vision-mission .container {
+.vision-mission .vision .box {
+    flex:1;
+    margin-right: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    transition: .4s;
+    text-align: justify;
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Reduced gap */
+    justify-content: center;
+}
+.vision-mission .mission .box1{
+    padding-top: 200px;
+    margin-bottom: 100px;
+    margin-left: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shadow);
+    transition: .4s;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex:1;
+
+}
+.vision-mission .box:hover {
+    transform: scale(1.05);
+}
+.vision-mission .box1:hover{
+    transform: scale(1.05);
 }
 
 .vision-mission h2 {
     font-size: 2rem;
     color: var(--main-color);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .vision-mission p {
     font-size: 1rem;
     color: var(--text-color);
+    line-height: 1.6;
 }
 
 .registration-certificate {
     background: #f9f9f9;
-    padding: 40px 100px;
+    padding: 10px 20px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.registration-certificate:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .registration-certificate h2 {
@@ -142,6 +181,7 @@ header {
     height: auto;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .certificates .heading h2 {
@@ -156,26 +196,31 @@ header {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    padding: 0 50px;
+    padding: 20px 20px;
     overflow: hidden;
 }
 
 .certificates-container .box {
     flex: 1;
-    min-width: 350px;
+    min-width: 250px;
     max-width: 400px;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     text-align: center;
     background-color: var(--bg-color);
     box-shadow: var(--box-shadow);
-    transition: .4s;
+    transition: transform 0.3s, box-shadow 0.3s;
     animation: slide 5s infinite linear;
+}
+
+.certificates-container .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .certificates-container img {
     width: 100%;
-    max-width: 350px;
+    max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
 }
@@ -185,8 +230,21 @@ header {
     margin-bottom: 10px;
 }
 
+.certificates-container .box:hover {
+    transform: scale(1.1);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 .green-divider {
-    height: 100px;
+    padding:50px;
     background-color: var(--main-color);
     margin: 20px 0;
 }
@@ -234,7 +292,7 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
-    padding: 50px 100px;
+    padding: 50px 20px;
 }
 
 .footer-box {
@@ -244,9 +302,9 @@ header {
 }
 
 .footer-box img {
-    max-width: 200px; /* Set a maximum width */
-    width: 100%; /* Ensure it is responsive */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 200px;
+    width: 100%;
+    height: auto;
 }
 
 .footer-box a {
@@ -331,5 +389,84 @@ header {
 
     section, footer {
         padding: 20px;
+    }
+
+    .certificates-container {
+        padding: 0 10px;
+    }
+
+    .vision-mission {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .vision-mission .box {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .registration-certificate {
+        padding: 30px 20px;
+    }
+}
+@media (max-width: 1200px) {
+    section {
+        padding: 20px;
+    }
+
+    .footer {
+        padding: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .newsletter h2 {
+        font-size: 1.5rem;
+        font-style: normal;
+    }
+
+    .contact span {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact i {
+        margin: 0 auto 0.5rem;
+    }
+}
+@media (max-width: 320px) {
+    section {
+        padding: 10px;
+    }
+
+    .navbar {
+        top: 50px;
+    }
+
+    .green-divider {
+        height: 1px;
+        margin: 10px 0;
+    }
+
+    .vision-mission .vision,
+    .vision-mission .mission {
+        padding: 20px 10px;
+    }
+
+    .registration-certificate {
+        padding: 20px 10px;
+    }
+
+    .certificates-container .box {
+        min-width: 200px;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .footer-box p,
+    .footer-box a {
+        font-size: 0.875rem;
     }
 }
